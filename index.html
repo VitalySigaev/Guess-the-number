@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <title>Game "Guess the number".</title>
+</head>
+
+<body>
+    <h1>Игра «Угадай число».</h1>
+    <h2>По умолчанию числа задаются в диапазоне от 1 до 100, но вы можете задать свой
+        диапазон.</h2>
+    <h3 class="range-title"></h3>
+    <label for="userNumber">Введите число</label>
+    <div class="userInput">
+        <input type="text" id="userNumber">
+        <span class="error error-range">Вы ввели число вне диапазонна</span>
+        <span class="error error-type">Вы ввели не число</span>
+    </div>
+    <div class="buttons">
+        <button id="checkNumber">Проверить число</button>
+        <button id="pickNumber">Загадать число</button>
+        <button id="restart">Начать заново</button>
+        <button id="setRange">Установить диапазон</button>
+    </div>
+    <div class="range-container">
+        <label for="from" class="range-input">От</label>
+        <input type="text" class="range-input" id="from">
+        <label for="to" class="range-input">До</label>
+        <input type="text" class="range-input" id="to">
+    </div>
+    <div class="attempt"></div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-close-container"> <span class="modal-close">&times;</span></div>
+            <div class="modal-text"></div>
+        </div>
+    </div>
+    <script src="./js/index.js" type="module"></script>
+</body>
+
+</html>
